@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+export DH_RUBY = --gem-install
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+# do not install bin/* in /usr/bin
+override_dh_install:
+	dh_install
+	rm -rf debian/ruby-diff-lcs/usr/bin
+
+override_dh_installchangelogs:
+	dh_installchangelogs History.md

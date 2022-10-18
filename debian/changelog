@@ -1,0 +1,153 @@
+ruby-diff-lcs (1.4.4-1) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+
+  [ Cédric Boutillier ]
+  * New upstream version 1.4.4
+  * refresh packaging
+  * Drop patches, applied upstream
+  * New patch to add missing upstream fixtures in the gem
+  * Bump debhelper compatibility to 13
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 10 Jul 2020 14:34:06 +0200
+
+ruby-diff-lcs (1.3-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Use https:// in Vcs-* fields
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Lucas Nussbaum ]
+  * New upstream version 1.3
+  * Bump Standards-Version. No changes needed.
+  * Refresh packaging
+  * Refresh patches
+
+ -- Lucas Nussbaum <lucas@debian.org>  Thu, 06 Jul 2017 22:34:19 +0200
+
+ruby-diff-lcs (1.2.5-2) unstable; urgency=medium
+
+  * Add hunk_in_spec.patch to require diff/lcs/hunk.rb in spec_hunk.rb
+    (closes: #794164)
+  * Update homepage to GitHub as rubyforge is dead
+  * Refresh packaging
+    + Bump Standards to 3.9.6 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 12 Aug 2015 13:31:59 +0200
+
+ruby-diff-lcs (1.2.5-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.2.5
+  * Install upstream changelog
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 15 Feb 2014 23:44:20 +0100
+
+ruby-diff-lcs (1.2.4-1) unstable; urgency=low
+
+  * New upstream version
+  * Build against gem2deb (>= 0.3.0~) to provide rubygems integration (Closes:
+    #698214)
+  * debian/control:
+    + add myself to Uploaders
+    + remove deprecated DM-Upload-Allowed field
+    + bump Standards-Version to 3.9.4 (no changes needed)
+    + use canonical URLs for Vcs-* fields
+    + drop obsolete transition packages
+    + depend on ruby instead of ruby1.8
+  * debian/copyright:
+    + convert copyright file to DEP-5 copyright-format/1.0
+    + update copyright information
+  * debian/source/local-options: add unapply-patches
+  * debian/patches: add fix_shebang_for_bins.patch to fix shebang for scripts
+    in bin/
+  * use ruby-tests.rake method to run the specs
+  * ship scripts in bin/ as examples
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 07 May 2013 16:25:44 +0200
+
+ruby-diff-lcs (1.1.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Switch to my @d.o email address.
+  * Standards-Version -> 3.9.2. No changes needed.
+  * Conflicts -> Breaks.
+  * drop 10_shebangs. no need to fix shebangs in libs.
+  * switch to rspec to run tests.
+  * README renamed to README.rdoc.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Sun, 09 Oct 2011 12:06:27 +0200
+
+ruby-diff-lcs (1.1.2-7) unstable; urgency=low
+
+  * Switch to gem2deb-based packaging. Rename source and binary packages.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Tue, 26 Apr 2011 11:17:29 +0200
+
+libdifflcs-ruby (1.1.2-6) unstable; urgency=low
+
+  * This package is now maintained within the Debian/Ruby Extras team.
+  * debian/control:
+    - Added the team (and myself) to the uploaders.
+    - Added the Vcs-* fields.
+  * debian/watch: Changed the regexp so it doesn't look at the wrong
+    files (e.g. GPG asc sign files).
+
+ -- Paul van Tilburg <paulvt@debian.org>  Sat, 10 Apr 2010 22:53:45 +0200
+
+libdifflcs-ruby (1.1.2-5) unstable; urgency=low
+
+  * Dropped shebang replacement for /usr/bin from 10_shebangs.dpatch -
+    libsetup-ruby will take care
+  * Renamed /usr/bin/*1.9 -> *1.9.1 (Closes: #570434)
+  * Backup and restore scripts with shebang line to work around #571981 in
+    libsetup-ruby
+  * Switched to source format 3.0 (quilt)
+  * Updated package description
+
+ -- Tobias Grimm <etobi@debian.org>  Tue, 06 Apr 2010 19:43:50 +0200
+
+libdifflcs-ruby (1.1.2-4) unstable; urgency=low
+
+  * Move from ruby1.9 to ruby1.9.1 (Closes: #569887).
+  * Removed unused lintian override.
+  * Enabled tests in debian/rules.
+  * Bumped up Standards-Version.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 15 Feb 2010 12:01:23 +0100
+
+libdifflcs-ruby (1.1.2-3) unstable; urgency=low
+
+  * More proper debian/rules to deal with duplicate binaries in
+    /usr/bin/*.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 12 Oct 2009 17:22:34 +0200
+
+libdifflcs-ruby (1.1.2-2) unstable; urgency=low
+
+  * Moved to CDBS.
+  * Added debian/watch file.
+  * Bumped up Standards revision.
+  * Various lintian cleanups.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 12 Oct 2009 16:18:40 +0200
+
+libdifflcs-ruby (1.1.2-1) unstable; urgency=low
+
+  * Initial Release (Closes: #480584).
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 11 May 2008 10:40:53 -0700

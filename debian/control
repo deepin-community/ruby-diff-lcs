@@ -1,0 +1,31 @@
+Source: ruby-diff-lcs
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Lucas Nussbaum <lucas@debian.org>,
+           Cédric Boutillier <boutil@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               rake,
+               ruby,
+               ruby-rspec
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-diff-lcs.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-diff-lcs
+Homepage: https://github.com/halostatue/diff-lcs
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-diff-lcs
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: McIlroy-Hunt longest common subsequence algorithm implementation
+ Diff::LCS is a port of Algorithm::Diff that uses the McIlroy-Hunt
+ longest common subsequence (LCS) algorithm to compute intelligent
+ differences between two sequenced enumerable containers. The
+ implementation is based on Mario I. Wolczko's Smalltalk version,
+ and Ned Konz's Perl version (Algorithm::Diff).
